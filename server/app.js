@@ -26,3 +26,4 @@ app.listen(app.get('port'), () => {
 //start Bifinex
 const bifinex = require("./Bifinex/mainBifinex");
 bifinex.start();
+bifinex.btcusd();
