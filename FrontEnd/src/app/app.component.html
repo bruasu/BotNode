@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">My Trading Bot <h6 >Bruno Asunción</h6></h1>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Fibonacci</h3>
+        </div>
+        <div class="card-body">
+          <form action="">
+            <div class="form-group">
+              <label for="">High</label>
+              <input class="form-control" type="number" min="1" [(ngModel)]="high" name="high">
+            </div>
+            <div class="form-group">
+              <label for="">Low</label>
+              <input class="form-control" type="number" min="1" [(ngModel)]="low" name="low">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" (click)="requestValueFibonacci()">Calculation</button>
+            </div>
+          </form>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <div class="card mt-1" *ngIf="fibonacci">
+            <div class="card-header">
+              <h4>Values Fibonacci UP</h4>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr *ngFor="let fiboResult of fibonacci.fibonacciUP">
+                  <td>{{fiboResult.name}}</td>
+                  <td>{{fiboResult.value}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+    </div>
+    <div class="col-6">
+        <div class="card mt-1" *ngIf="fibonacci">
+            <div class="card-header">
+              <h4>Values Fibonacci DOWN</h4>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr *ngFor="let fiboResult of fibonacci.fibonacciDown">
+                  <td>{{fiboResult.name}}</td>
+                  <td>{{fiboResult.value}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

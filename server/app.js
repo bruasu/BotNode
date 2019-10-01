@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended: false}));
 app.set('port', process.env.PORT || 2500);
 
 //routes
-
+app.use('/api/fibonacci', require('./routes/fibonacci.route'));
 
 //starting the server
 

@@ -3,10 +3,7 @@ const fibonacci = {
         const valDifference = higt - low;
         const valueFibinacciPorcentages = calculateFibo.porcentagesDifference(valDifference);
         const fibonacci = calculateFibo.fiboSum(higt, low, valueFibinacciPorcentages);
-
-
-        console.log(fibonacci);
-        
+        return fibonacci;        
     }
 };
 
@@ -29,37 +26,40 @@ const calculateFibo = {
         return json;
     },
     fiboSum: (high, low, json) => {
+        let High = parseFloat(high);
+        let Low = parseFloat(low);
         const jsonFibonacci = {
-            fibonacciUP: {
-                f0000: high,
-                f0236: high - json.f0236,
-                f0382: high - json.f0382,
-                f0500: high - json.f0500,
-                f0618: high - json.f0618,
-                f0786: high - json.f0786,
-                f1000: low,
-                f1236: high + json.f0236,
-                f1382: high + json.f0382,
-                f1500: high + json.f0500,
-                f1618: high + json.f0618,
-                f1786: high + json.f0786,
-                f2000: high + (json.f0618 + json.f0382)
-            },
-            fibonacciDown: {
-                f0000: low,
-                f0236: low + json.f0236,
-                f0382: low + json.f0382,
-                f0500: low + json.f0500,
-                f0618: low + json.f0618,
-                f0786: low + json.f0786,
-                f1000: high,
-                f1236: low - json.f0236,
-                f1382: low - json.f0382,
-                f1500: low - json.f0500,
-                f1618: low - json.f0618,
-                f1786: low - json.f0786,
-                f2000: low - (json.f0618 + json.f0382)
-            }
+            fibonacciUP: [
+                {"name":"f0000", "value": High},
+                {"name":"f0236", "value": High -  parseFloat(json.f0236)},
+                {"name":"f0382", "value": High -  parseFloat(json.f0382)},
+                {"name":"f0500", "value": High -  parseFloat(json.f0500)},
+                {"name":"f0618", "value": High -  parseFloat(json.f0618)},
+                {"name":"f0786", "value": High -  parseFloat(json.f0786)},
+                {"name":"f1000", "value": Low},
+                {"name":"f1236", "value": High +  parseFloat(json.f0236)},
+                {"name":"f1382", "value": High +  parseFloat(json.f0382)},
+                {"name":"f1500", "value": High +  parseFloat(json.f0500)},
+                {"name":"f1618", "value": High +  parseFloat(json.f0618)},
+                {"name":"f1786", "value": High +  parseFloat(json.f0786)},
+                {"name":"f2000", "value": High + (parseFloat(json.f0618) +  parseFloat(json.f0382))}
+            ],
+            fibonacciDown: 
+            [
+                {"name":"f0000", "value": Low},
+                {"name":"f0236", "value": Low +  parseFloat(json.f0236)},
+                {"name":"f0382", "value": Low +  parseFloat(json.f0382)},
+                {"name":"f0500", "value": Low +  parseFloat(json.f0500)},
+                {"name":"f0618", "value": Low +  parseFloat(json.f0618)},
+                {"name":"f0786", "value": Low +  parseFloat(json.f0786)},
+                {"name":"f1000", "value": High},
+                {"name":"f1236", "value": Low -  parseFloat(json.f0236)},
+                {"name":"f1382", "value": Low -  parseFloat(json.f0382)},
+                {"name":"f1500", "value": Low -  parseFloat(json.f0500)},
+                {"name":"f1618", "value": Low -  parseFloat(json.f0618)},
+                {"name":"f1786", "value": Low -  parseFloat(json.f0786)},
+                {"name":"f2000", "value": Low - (parseFloat(json.f0618) +  parseFloat(json.f0382))}
+            ]
         }
 
         return jsonFibonacci;
