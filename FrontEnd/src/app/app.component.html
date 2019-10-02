@@ -5,7 +5,7 @@
     </div>    
   </div>
   <div class="row">
-    <div class="col-6">
+ <!--    <div class="col-6">
       <div class="card">
         <div class="card-header">
           <h3 class="text-center">Fibonacci</h3>
@@ -26,7 +26,87 @@
           </form>          
         </div>
       </div>
+    </div> -->
+
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Calculation Value Position</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="text-center">Price Negotiation</h5>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="">High</label>
+                    <input type="number" class="form-control" min="1" [(ngModel)]="high" name="high">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Low</label>
+                    <input type="number" class="form-control" min="1" [(ngModel)]="low" name="low">
+                  </div>  
+                  <fieldset class="form-group"  >
+                    <legend>Type Calculation</legend>
+                    <div class="form-check">
+                      <label for="" class="form-check-label">
+                        <input type="radio" class="form-check-input" value="fibonacci" [(ngModel)]="typePriceNegotiation" name="typePriceNegotiation">
+                        Fibonacci
+                      </label>
+                    </div>
+                  </fieldset>  
+                  <fieldset class="form-group" *ngIf="typePriceNegotiation == 'fibonacci'" >
+                      <legend>Type Operation</legend>
+                      <div class="form-check">
+                        <label for="" class="form-check-label">
+                          <input type="radio" class="form-check-input" value="short" [(ngModel)]="typeOperation" >
+                          Short
+                        </label>
+                      </div>
+                      <div class="form-check">
+                          <label for="" class="form-check-label">
+                            <input type="radio" class="form-check-input" value="long" [(ngModel)]="typeOperation" >
+                            Long
+                          </label>
+                      </div>
+                  </fieldset> 
+
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="text-center">Settings</h5>
+                </div>
+                <div class="card-body">
+                  <div class="fogrouprm-">
+                    <label for="">Limit lost</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input type="number" class="form-control" placeholder="ex: 1 ">
+                      <div class="input-group-append">
+                        <span class="input-group-text">Dollar</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="">Stop</label>
+                      <input type="number" class="form-control">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
   <div class="row">
     <div class="col-6">

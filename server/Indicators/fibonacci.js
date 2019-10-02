@@ -30,19 +30,19 @@ const calculateFibo = {
         let Low = parseFloat(low);
         const jsonFibonacci = {
             fibonacciUP: [
+                {"name":"f2000", "value": High + (parseFloat(json.f0618) +  parseFloat(json.f0382))},
+                {"name":"f1786", "value": High +  parseFloat(json.f0786)},
+                {"name":"f1618", "value": High +  parseFloat(json.f0618)},
+                {"name":"f1500", "value": High +  parseFloat(json.f0500)},
+                {"name":"f1382", "value": High +  parseFloat(json.f0382)},
+                {"name":"f1236", "value": High +  parseFloat(json.f0236)},
                 {"name":"f0000", "value": High},
                 {"name":"f0236", "value": High -  parseFloat(json.f0236)},
                 {"name":"f0382", "value": High -  parseFloat(json.f0382)},
                 {"name":"f0500", "value": High -  parseFloat(json.f0500)},
                 {"name":"f0618", "value": High -  parseFloat(json.f0618)},
                 {"name":"f0786", "value": High -  parseFloat(json.f0786)},
-                {"name":"f1000", "value": Low},
-                {"name":"f1236", "value": High +  parseFloat(json.f0236)},
-                {"name":"f1382", "value": High +  parseFloat(json.f0382)},
-                {"name":"f1500", "value": High +  parseFloat(json.f0500)},
-                {"name":"f1618", "value": High +  parseFloat(json.f0618)},
-                {"name":"f1786", "value": High +  parseFloat(json.f0786)},
-                {"name":"f2000", "value": High + (parseFloat(json.f0618) +  parseFloat(json.f0382))}
+                {"name":"f1000", "value": Low}
             ],
             fibonacciDown: 
             [
@@ -53,12 +53,12 @@ const calculateFibo = {
                 {"name":"f0618", "value": Low +  parseFloat(json.f0618)},
                 {"name":"f0786", "value": Low +  parseFloat(json.f0786)},
                 {"name":"f1000", "value": High},
-                {"name":"f1236", "value": Low -  parseFloat(json.f0236)},
-                {"name":"f1382", "value": Low -  parseFloat(json.f0382)},
-                {"name":"f1500", "value": Low -  parseFloat(json.f0500)},
-                {"name":"f1618", "value": Low -  parseFloat(json.f0618)},
+                {"name":"f2000", "value": Low - (parseFloat(json.f0618) +  parseFloat(json.f0382))},
                 {"name":"f1786", "value": Low -  parseFloat(json.f0786)},
-                {"name":"f2000", "value": Low - (parseFloat(json.f0618) +  parseFloat(json.f0382))}
+                {"name":"f1618", "value": Low -  parseFloat(json.f0618)},
+                {"name":"f1500", "value": Low -  parseFloat(json.f0500)},
+                {"name":"f1382", "value": Low -  parseFloat(json.f0382)},
+                {"name":"f1236", "value": Low -  parseFloat(json.f0236)}
             ]
         }
 

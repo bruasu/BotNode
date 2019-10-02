@@ -10,6 +10,8 @@ export class AppComponent {
 
   high: number;
   low: number;
+  typePriceNegotiation: string;
+  typeOperation: string;
 
   fibonacci: object;
   
