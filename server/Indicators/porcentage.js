@@ -1,11 +1,10 @@
 const porcentage = {
     porcentage: (valueInit, valueEnd) => {
-        let difference = parseFloat(valueInit) - parseFloat(valueEnd);
+        let difference = parseFloat(valueEnd) - parseFloat(valueInit);
         let calc = difference / valueInit;
         let percentage = calc * 100;
-        return percentage;
+        return percentage.toFixed(2);
     }
 };
-console.log(porcentage.porcentage(1000,1200));
 
 module.exports = porcentage;
