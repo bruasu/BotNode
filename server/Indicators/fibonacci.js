@@ -67,5 +67,5 @@ const calculateFibo = {
     
 };
 
-fibonacci.fibo(8451,7716);
+console.log(fibonacci.fibo(8500,7820));
 module.exports = fibonacci;
